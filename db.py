@@ -18,7 +18,7 @@ def check_db_exists() -> None:
                    "WHERE type='table' AND name='expenses'")
     table_exists = cursor.fetchall()
     if table_exists:
-        return
+        return None
     _init_db()
 
 
